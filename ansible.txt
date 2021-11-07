@@ -1,0 +1,62 @@
+ ansible
+ # ansible is a congiguration mangement tool wher using ansible u can diretly configure whetever the servers u wnt 
+  even tho diployment also we can deploy using ansible wher u have to deploy wher u have to copy using ansible.
+
+launch 2 instance
+first go to path give creadentials for root user
+cd /etc/ssh/
+vi sshd_config
+# now change the configurations 
+remove # to permit root login
+remove # publickey authentication
+password authentication changr to (yes)
+:wq!
+service sshd restart
+now change the value : passwd
+give passwd : ukil123
+again passwd :ukil123
+# and close the server and again login to server with same ip and user as root then no pemkey just login and give passwrd ukil123 in server
+ do same to 2nd srever
+ next
+ssh-keygen
+3 times enter
+ssh-copy-id root@10.0.0.0/16
+cd /etc /ssh/
+ll
+yum install ansible
+# go to etc directory
+cd ..
+ll
+cd ansible/
+ll
+vi hosts (CHANGE THE IP ADRESS OF SLAVE)
+ansible -i ./hosts all -m ping
+vi playbook.yml ( write the playbook code ---hear)
+---
+- hosts: all
+  become: yes
+  tasks:
+   - name: install apache2
+     shell: yum install httpd -y)
+ansible-playbook anyotherfile.yml
+# and now go to the slave server 
+systemctl status httpd
+and now come to master server 
+vi anyotherfile.yml (write playbook code  -
+- name :install apache2
+  shell: yum install httpd -y)
+ansible-playbook anotherfile.yml
+# and now go to master server
+systemctl status httpd - httpd service will active
+(- name :install apache2
+  shell: yum install httpd -y)
+# and now go to master server
+vi anyother.yml   ( write the playbook code 
+ansible-playbook another.yml
+now goto slave server
+systemctl status httpd - httpd service will deactive
+
+
+
+
+

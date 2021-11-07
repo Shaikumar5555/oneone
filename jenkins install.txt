@@ -1,0 +1,12 @@
+install jenkins
+to install jenkins we nedd to install java =yum install java 
+java -version
+after that go to jenkins official web site (pkg.jenkins.io)-(redhat/stable)
+aftthat coppy the first link and coppy after that second link copy and past
+yum install jenkins -yum
+systemctl start jenkins
+systemctl enable jenkins 
+systemctl status jenkins
+and goto web server paste the public id with:8080
+and copy the pass and paste it with 
+cat+ password with in mobaxterm

@@ -1,0 +1,8 @@
+installS git
+yum install git
+ y
+clone the git conttentthat coppeyed fron git hss (git@github.com:Shaikumar55/Shaikumar55.git)
+  yes
+  we dnthave permision aply ssh-keygen) and enter 3 times
+  type (cat .ssh/id_rsa.pub)
+  

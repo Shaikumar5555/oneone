@@ -1,0 +1,37 @@
+maven install
+install java jdk version
+jdk url: https:/ /blog.knoluds.com/installing-latest--oracle-jdk-on-linux-ec2-instance-centos/
+and select hotfit toinstall latest version oracle jdk sellect 
+sellsct step 3 copy that command and paste in our instance and paste the comand and enter
+ls -ltr
+(sudo yum install -y jdk-8u141-linux-x64.rpm)
+(java -version) 
+java has been installed succesfully
+  and go to ewb server search apachi maven click on = download on web page
+cpy the the appachy maventar/bin.tar.bz linl copy and past in mobaxtrm
+with wget and that coopy link and download appachi maven 
+ls-ltr
+ll
+now apache maven it is in tar file so we need to extract tar file 
+(tar -zxvf and apache-maven-3.8.1bn tar.gz)
+then tarfile will remove
+java -version 
+which java
+mvn compile
+cd apache-maven-3.8.3/
+ll
+cd bin/
+ll
+in this itwill show the (mvn)
+pwd ==it (will show the root/apache-maven-3,8.1/bin)
+/root/apache-maven-3.8.1/bin (copy this to vi .bashrc) then
+(cd) and change to root directory
+pwd =root
+(ls -a) it will dispaly the hidden files
+we will edit (vi .bashrc)
+ go to last line type (export PATH=/root/apache-maven-3.8.1/bin:$PATH)
+and save the file esq:qw!
+and give (source /root/.bashrc)
+ mvn compile
+  cd apache-maven-3.8.1/bin/
+pwd
